@@ -25,9 +25,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ inputs.branch }}
+        uses: actions/checkout@v4
 
       - name: Compile LaTeX
         run: cd ${{ inputs.dir }} && latexmk ${{ inputs.latexmk_args }} ${{ inputs.filename }}.tex
