@@ -22,6 +22,7 @@ jobs:
 
     container:
       image: thubo/latexmk:medium
+      options: --user root
 
     steps:
       - name: Checkout repository
