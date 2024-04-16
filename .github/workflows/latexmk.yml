@@ -42,7 +42,7 @@ jobs:
           echo '<a href="main.pdf" target="_blank">PDF.</a>' > public/index.html
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: pdf
           path: public/main.pdf
