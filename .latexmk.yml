@@ -3,10 +3,6 @@ name: LaTeX build and publish
 on:
   workflow_call:
     inputs:
-      branch:
-        required: false
-        default: 'master'
-        type: string
       dir:
         required: false
         default: '.'
