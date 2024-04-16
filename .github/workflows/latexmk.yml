@@ -15,13 +15,17 @@ on:
         required: false
         default: '-pdf'
         type: string
+      image:
+        required: false
+        default: 'medium'
+        type: string
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     container:
-      image: thubo/latexmk:medium
+      image: thubo/latexmk:${{ inputs.image }}
       options: --user root
 
     steps:
