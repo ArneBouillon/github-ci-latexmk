@@ -19,6 +19,10 @@ on:
         required: false
         default: 'medium'
         type: string
+      public_pages:
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   build:
@@ -50,6 +54,8 @@ jobs:
   deploy:
     # Add a dependency to the build job
     needs: build
+
+    if: ${{ inputs.public_pages }}
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
